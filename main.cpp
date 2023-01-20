@@ -158,6 +158,13 @@ string romanCalculator(string input, map<char, int> &roman) {
 }
 
 int main(){
+  string input;
+    map<char, int> roman = {{'I', 1}, {'V', 5}, {'X', 10}, {'L', 50}, {'C', 100}, {'D', 500}, {'M', 1000}};
+    
+    cout << "Enter a Roman arithmetic expression (without spacing): ";
+    cin >> input;
+    
+    cout << "Roman value: " << romanCalculator(input, roman) << endl;
 
   return 0;
 }
