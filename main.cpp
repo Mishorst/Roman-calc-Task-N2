@@ -28,6 +28,26 @@ int romanToInt(string s, map<char, int> &roman) {
     return result;
 }
 
+// Function to convert an integer to a Roman numeral string
+string intToRoman(int num, map<int, string> &roman) {
+    string result = "";
+    
+    // Iterate through the map in descending order
+    for (auto it = roman.rbegin(); it != roman.rend(); it++) {
+        
+        // While the number is greater than or equal to the current value
+        while (num >= it->first) {
+            
+            // Subtract the current value from the number
+            num -= it->first;
+            
+            // Append the corresponding Roman numeral to the result string
+            result += it->second;
+        }
+    }
+    return result;
+}
+
 int main(){
 
   return 0;
